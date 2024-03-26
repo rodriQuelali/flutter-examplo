@@ -1,0 +1,45 @@
+conceptos fundamentales:
+*****************************
+-practicar, practicar
+
+Widgets:
+es una clase de argumentos posicionales argumentos con nombres.
+son como legos para ir armanado.
+
+Appbar(
+    title: Text('hola mundo'),
+)
+cabesera del bton
+
+dos tipos de widgets:
+*****StatelessWidget:
+sin estado, no le importa si cambia el estado de la aplicaciones
+
+*****StatefulWidget:
+con estado, saber es estado de si mismo, eventualmete puede cambiar.
+
+///////////////////////////////////////////////////////////////////////
+ARBOL DE WIDGETS
+
+TabBar(parte de abajo) <---- Scaffold(lo principal) ---> AppBar(la cabecera)
+                                        |
+                                        |
+                                        |
+                                    Container
+                                        |
+                                        |
+                                       Text
+                                        |
+                                        |
+            Widget Persoanlizados      Row
+                                        .
+                                        .
+                                        .
+
+en los proyectos vamos a tener varios widgets, el conceptoes como manejar la gran cantidad de datos.
+
+////////////////////////////////////////////////////////
+explicacion de carpetas.
+
+.gitignore ----> est va a al repositorio, las carpetas no se vana lanzar en produccion.
+
