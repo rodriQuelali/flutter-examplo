@@ -6,6 +6,7 @@ class HomePage extends StatelessWidget{
   Widget build(BuildContext context) {
 
     final estiloTexto = TextStyle(fontSize:  25.0);
+    final  conteo = 10;
 
     return Scaffold(
       appBar: AppBar(
@@ -17,10 +18,17 @@ class HomePage extends StatelessWidget{
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('numero de clicks: ', style: estiloTexto,),
-            Text('0', style: estiloTexto,),
+            Text('numero de clicksss: ', style: estiloTexto,),
+            Text('$conteo', style: estiloTexto,),
           ],
         )
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => {
+          conteo = conteo + 1;
+        }, 
+        child: Icon(Icons.add),
       ),
     );
   }
