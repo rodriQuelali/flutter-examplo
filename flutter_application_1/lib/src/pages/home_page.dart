@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget{
-  
+  final estiloTexto = TextStyle(fontSize:  25.0);
+  final  conteo = 10;
+
   @override
   Widget build(BuildContext context) {
-
-    final estiloTexto = TextStyle(fontSize:  25.0);
-    final  conteo = 10;
 
     return Scaffold(
       appBar: AppBar(
@@ -23,10 +22,11 @@ class HomePage extends StatelessWidget{
           ],
         )
       ),
+      
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         onPressed: () => {
-          conteo = conteo + 1;
+          //conteo = conteo + 1;
         }, 
         child: Icon(Icons.add),
       ),
