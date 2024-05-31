@@ -10,23 +10,13 @@ class _MenuProvider {
     cargarData();
   }
   
-  void cargarData() {
-      rootBundle.loadString('data/menu_opts.json').then((value) => {
-          Map<String, dynamic> dataMap = json.decode(value);
-          print(dataMap);
-        }).catchError((err){
+  Future<List <dynamic>> cargarData() async {
+    final resp = await rootBundle.loadString('data/menu_opts.json');
 
-        })
-  }
+    Map<String, dynamic> dataMap = json.decode(resp);
+    opcion = dataMap['rutas'];
 
-   cargarData2() {
-    rootBundle.loadString('data/menu_opts.json').then((value) {
-      Map<String, dynamic> dataMap = json.decode(value);
-      opciones = dataMap['options']; // Asegúrate de que tu JSON tiene una clave 'options'
-      print(opciones);
-    }).catchError((error) {
-      print("Error al cargar el archivo JSON: $error");
-    });
+    return opcion;
   }
 }
 
