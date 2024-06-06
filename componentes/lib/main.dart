@@ -13,11 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Componenetes APP',
       debugShowCheckedModeBanner: false,
-      //home: HomePage()
       initialRoute: '/',
       routes: getAplicationRoutes(),
       onGenerateRoute: (RouteSettings settings){
-        print('ruta llamada: ${settings.name}');
+        //print('ruta llamada: ${settings.name}');
         return MaterialPageRoute(
           builder: (BuildContext context) => AlertPage()
           );
